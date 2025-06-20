@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.log
+lerna-debug.log
+.nx/

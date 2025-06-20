@@ -1,0 +1,9 @@
+{
+  "name": "@codex/core",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"no tests\""
+  }
+}

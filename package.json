@@ -1,0 +1,14 @@
+{
+  "name": "codex-explorations",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "nx": "nx"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.0",
+    "nx": "^18.0.0"
+  }
+}
