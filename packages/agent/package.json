@@ -1,0 +1,13 @@
+{
+  "name": "@codex/agent",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"no tests\""
+  },
+  "dependencies": {
+    "@effect/ai": "^0.19.4",
+    "@effect/ai-openai": "^0.22.4"
+  }
+}

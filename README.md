@@ -7,8 +7,8 @@ ideas with OpenAI's Codex. This repository is organized as a monorepo using
 
 The goal of this project is to keep experiments isolated in their own packages
 while still sharing a common toolchain and configuration. Currently the repo
-contains a single package named `core`, but new packages can be added as the
-experiments grow.
+contains two packages named `core` and `agent`, but new packages can be added as
+the experiments grow.
 
 ## Getting Started
 
@@ -57,5 +57,21 @@ Individual packages can be tested by running the script from their directory:
 ```bash
 cd packages/core
 npm test
+```
+
+## Using the Agent Package
+
+The `@codex/agent` workspace provides a small helper for requesting completions from OpenAI via Effect:
+
+```ts
+import { requestCompletion } from "@codex/agent"
+import * as Effect from "effect/Effect"
+
+const program = requestCompletion({
+  apiKey: process.env.OPENAI_API_KEY!,
+  prompt: "Hello, world!"
+})
+
+Effect.runPromise(program).then(console.log)
 ```
 
