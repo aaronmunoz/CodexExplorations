@@ -1,35 +1,61 @@
 # Codex Explorations Monorepo
 
-This repository uses **npm workspaces** together with **Lerna** and **Nx** to manage multiple packages under the `packages/` directory.
+Welcome to **Codex Explorations**, a collection of small packages for trying out
+ideas with OpenAI's Codex. This repository is organized as a monorepo using
+**npm workspaces**, **Lerna**, and **Nx**. Each package lives under the
+`packages/` directory and can be built and tested independently.
 
-## Getting started
+The goal of this project is to keep experiments isolated in their own packages
+while still sharing a common toolchain and configuration. Currently the repo
+contains a single package named `core`, but new packages can be added as the
+experiments grow.
 
-Install dependencies for all workspaces and bootstrap Lerna:
+## Getting Started
+
+Install dependencies and bootstrap all workspaces with Lerna:
 
 ```bash
 npm install
 npx lerna bootstrap
 ```
 
+### Creating a Package
+
+You can create a new package by running Lerna's `create` command or by manually
+adding a directory under `packages/` with its own `package.json`.
+
+```bash
+npx lerna create my-new-package packages/my-new-package
+```
+
+The scripts defined at the root will automatically pick up the new workspace.
+
 ### Building
 
-Run the build script across all packages using Lerna:
+Run the build script across all packages:
 
 ```bash
 npm run build
 ```
 
+You can also build a single package using Nx:
+
+```bash
+npx nx build core
+```
+
 ### Testing
 
-Execute tests for each workspace:
+Execute tests for all workspaces:
 
 ```bash
 npm run test
 ```
 
-You can run individual Nx targets or build packages directly:
+Individual packages can be tested by running the script from their directory:
 
 ```bash
 cd packages/core
-npm run build
+npm test
 ```
+
