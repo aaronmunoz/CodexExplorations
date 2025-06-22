@@ -59,6 +59,14 @@ cd packages/core
 npm test
 ```
 
+### Cleaning
+
+Remove build artifacts and workspace caches (uses `rimraf` under the hood):
+
+```bash
+npm run clean:all
+```
+
 ## Using the Agent Package
 
 The `@codex/agent` workspace provides a small helper for requesting completions from OpenAI via Effect:
