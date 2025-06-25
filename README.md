@@ -83,3 +83,14 @@ const program = requestCompletion({
 Effect.runPromise(program).then(console.log)
 ```
 
+## Memory Bank
+
+Documentation for ongoing experiments, currently the roguelike deck‑builder, lives under [`memory-bank/`](memory-bank/). Core context files include:
+
+- [`projectbrief.md`](memory-bank/projectbrief.md) – high level goals and scope
+- [`productContext.md`](memory-bank/productContext.md) – why the game exists and desired experience
+- [`systemPatterns.md`](memory-bank/systemPatterns.md) – architecture and design patterns
+- [`techContext.md`](memory-bank/techContext.md) – chosen technologies
+- [`activeContext.md`](memory-bank/activeContext.md) – current milestones
+- [`progress.md`](memory-bank/progress.md) – status and next steps
+
