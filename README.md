@@ -72,12 +72,12 @@ npm run clean:all
 The `@codex/agent` workspace provides a small helper for requesting completions from OpenAI via Effect:
 
 ```ts
-import { requestCompletion } from "@codex/agent"
-import * as Effect from "effect/Effect"
+import { requestCompletion } from '@codex/agent'
+import * as Effect from 'effect/Effect'
 
 const program = requestCompletion({
   apiKey: process.env.OPENAI_API_KEY!,
-  prompt: "Hello, world!"
+  prompt: 'Hello, world!',
 })
 
 Effect.runPromise(program).then(console.log)
