@@ -59,6 +59,32 @@ cd packages/core
 npm test
 ```
 
+### Linting and Formatting
+
+Run ESLint across all packages:
+
+```bash
+npm run lint
+```
+
+Automatically fix lint errors:
+
+```bash
+npm run lint:fix
+```
+
+Check formatting with Prettier:
+
+```bash
+npm run format
+```
+
+Automatically format files:
+
+```bash
+npm run format:fix
+```
+
 ### Cleaning
 
 Remove build artifacts and workspace caches (uses `rimraf` under the hood):
@@ -72,14 +98,13 @@ npm run clean:all
 The `@codex/agent` workspace provides a small helper for requesting completions from OpenAI via Effect:
 
 ```ts
-import { requestCompletion } from "@codex/agent"
-import * as Effect from "effect/Effect"
+import { requestCompletion } from '@codex/agent'
+import * as Effect from 'effect/Effect'
 
 const program = requestCompletion({
   apiKey: process.env.OPENAI_API_KEY!,
-  prompt: "Hello, world!"
+  prompt: 'Hello, world!',
 })
 
 Effect.runPromise(program).then(console.log)
 ```
-
