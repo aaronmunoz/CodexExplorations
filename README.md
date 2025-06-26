@@ -7,8 +7,8 @@ ideas with OpenAI's Codex. This repository is organized as a monorepo using
 
 The goal of this project is to keep experiments isolated in their own packages
 while still sharing a common toolchain and configuration. Currently the repo
-contains two packages named `core` and `agent`, but new packages can be added as
-the experiments grow.
+contains packages `core`, `agent`, `game-core`, `game-cli`, and `game-web`, but
+new packages can be added as the experiments grow.
 
 ## Getting Started
 
