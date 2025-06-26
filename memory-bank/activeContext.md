@@ -11,4 +11,4 @@ The repository is configured as a TypeScript monorepo for Codex experimentation.
 3. **Encounter Logic** – procedural generation of enemies and rooms.
 4. **Basic Victory/Defeat Flow** – run through a short dungeon.
 
-Upcoming tasks involve creating a dedicated package for game logic and wiring it into the monorepo build.
+New packages `game-core`, `game-cli`, and `game-web` provide the initial structure for the game logic, CLI interface, and future web UI.
