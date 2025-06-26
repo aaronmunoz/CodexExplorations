@@ -4,7 +4,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo \"no tests\""
+    "test": "mocha src/**/*.test.ts --require ts-node/register",
+    "test:watch": "mocha src/**/*.test.ts --require ts-node/register --watch",
+    "dev": "tsc -p tsconfig.json --watch"
   },
   "dependencies": {
     "@effect/ai": "^0.19.4",

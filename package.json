@@ -7,12 +7,15 @@
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",
-    "lint": "npm run lint",
-    "lint:fix": "npm run lint:fix",
+    "test:watch": "lerna run test:watch",
+    "lint": "eslint packages/*/src/**/*.ts",
+    "lint:fix": "eslint packages/*/src/**/*.ts --fix",
     "prettier": "prettier --check .",
-    "prettier:fix": "npm run prettier --  --write .",
+    "prettier:fix": "prettier --write .",
+    "format": "npm run prettier:fix && npm run lint:fix",
     "nx": "nx",
-    "clean:all": "rimraf packages/*/dist packages/*/node_modules .nx"
+    "clean:all": "rimraf packages/*/dist packages/*/node_modules .nx",
+    "create-package": "node scripts/create-package.js"
   },
   "devDependencies": {
     "lerna": "^8.0.0",
@@ -23,6 +26,11 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "mocha": "^10.2.0",
+    "chai": "^4.3.10",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "ts-node": "^10.9.0"
   }
 }
